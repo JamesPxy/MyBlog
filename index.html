@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 我的Blog
+title: Blog  of  JamesPxy（彭湃的博客）
 ---
 <h2>{{ page.title }}</h2>
-<p>最新文章</p>
+<h3>最新文章</h3>
 <ul>
     {% for post in site.posts %}
 　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
