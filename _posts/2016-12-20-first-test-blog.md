@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll，my  first  test  blog!"
-date:   2014-11-17 13:31:01 +0800
+title: "Welcome to Jekyll，my  first  test  blog!"
+date:   2016-12-20 13:31:01 +0800
 categories:生活
 tag: 文学
 ---
@@ -10,7 +10,7 @@ tag: 文学
 {:toc}
 
 
-First POST build by Jekyll.
+First POST build by JamesPxy.
 
 
 诫子书
@@ -28,8 +28,3 @@ First POST build by Jekyll.
 ---------------------------
 
 这是我添加的内容 引导链接 [TO JamesPxy](http://my.csdn.net/?ref=toolbar)
-
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
