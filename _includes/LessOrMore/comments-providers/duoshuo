@@ -1,4 +1,4 @@
-<div class="ds-thread" data-thread-key="{{page.url}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>
+<div class="ds-thread" data-thread-key="{{page.url}}" data-title="{{page.title}}" data-url="{{"https://lebronjamespxy.github.io/jekyll_demo"}}{{page.url}}"></div>
 
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"{{ site.FB.comments.duoshuo.short_name }}"};
