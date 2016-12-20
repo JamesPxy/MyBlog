@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Welcome to Jekyll，my  first  test  blog!"
+title: "诫子书，my  first  test  blog!"
 date:   2016-12-20 13:31:01 +0800
-categories:生活
+categories: 生活
 tag: 文学
 ---
 
