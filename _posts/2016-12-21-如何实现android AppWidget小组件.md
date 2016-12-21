@@ -6,8 +6,6 @@ categories: Android
 tag: Android widget
 ---		
 
-Android中的AppWidget(桌面小部件）实现方式
-==========================================
 		
 如何编写一个AppWidget？
 ==========================================
