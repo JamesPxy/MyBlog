@@ -1,5 +1,5 @@
 # Site settings
-name: Blog  of Peng Xiaoyong——彭晓勇的个人博客
+name: Blog  of Peng Xiaoyong
 email: 1280272327@qq.com
 author: Peng Xiaoyong (JamesPxy)
 url: https://jamespxy.github.io/jekyll_demo/
@@ -9,7 +9,7 @@ baseurl: ""
 description: Action  speaks louder than  words , Just do  it !
 meta_description: 彭湃的个人博客，每日积累，厚积薄发！
 motto: 每日积累，厚积薄发！
-banner:  彭晓勇的个人博客，不忘初心，水滴石穿，贵在坚持！
+banner:  彭晓勇的个人博客，不忘初心，水滴石穿，贵在坚持！（Good  good  study,day  day  up!!!）
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
@@ -28,8 +28,8 @@ FB:
     provider : duoshuo
     duoshuo:
         short_name : jamespxy
-    disqus :
-        short_name : freudkang
+    # disqus :
+    #     short_name : freudkang
     # facebook :
     #   appid : 123
     #   num_posts: 5

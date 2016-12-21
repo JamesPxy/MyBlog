@@ -6,18 +6,20 @@ categories: Android
 tag: Android widget
 ---		
 
-##   Android中的AppWidget(桌面小部件）实现方式
+Android中的AppWidget(桌面小部件）实现方式
+==========================================
 		
-###如何编写一个AppWidget？
-1. 编写AppWidget的布局xml界面。
-1. 编写AppWidget的元数据xml文件。
- 		  该xml中定义当前AppWidget使用的
- 		  初始化布局，以及初始化宽高。
-		  70*n-30
-1. 编写AppWidget的控制器类。
- 		  要求该类继承自AppWidgetProvider.
- 		  重写父类的生命周期方法。
-1. 清单文件中配置该AppWidget。
+如何编写一个AppWidget？
+-------------------------------------
+	1. 编写AppWidget的布局xml界面。
+	2. 编写AppWidget的元数据xml文件。
+	 		  该xml中定义当前AppWidget使用的
+	 		  初始化布局，以及初始化宽高。
+			  70*n-30
+	3. 编写AppWidget的控制器类。
+	 		  要求该类继承自AppWidgetProvider.
+	 		  重写父类的生命周期方法。
+	4. 清单文件中配置该AppWidget。
 
 			  <receiver android:name="com.example.android_day09_appwidget.MyAppWidget">
 			<intent-filter >
@@ -29,7 +31,8 @@ tag: Android widget
 			android:resource="@xml/appwidget_meta"/>
 			  </receiver>
 		
-###AppWidgetProvider的生命周期
+AppWidgetProvider的生命周期
+----------------------------------------------
 		onEnable
 		onUpdate
 		onDeleted
@@ -39,7 +42,8 @@ tag: Android widget
 		AppWidgetManager
 		appWidgetId
 		
-###如何修改AppWidget中TextView的文字？
+如何修改AppWidget中TextView的文字？
+----------------------------------------------
 		1>创建于AppWidget布局相同的
 		  RemoteViews对象。
 		2>对RemoteViews对象中的控件进行修改。
@@ -49,14 +53,16 @@ tag: Android widget
 		  manager.updateAppWidget(id,views);
 		  
 ###如何给控件添加点击意图?
+----------------------------------------------
 		1>创建RemoteViews
 		2>remoteViews.setOnClickPendingIntent()
 		  告诉系统app：button  pendingIntent
 		3>manager.updateAppWidget();
 		
-###如何点击按钮后更新AppWidget的界面？
+如何点击按钮后更新AppWidget的界面？
+----------------------------------------------
 		
-###1.编写AppWidget的控制器类
+1.编写AppWidget的控制器类
 ---------------------------------------------------------
 		package com.example.androidday09appweidght;
 		
@@ -148,11 +154,10 @@ tag: Android widget
 		
 		
 ---------------------------
-###2.编写AppWidget的元数据xml文件。
-  该xml中定义当前AppWidget使用的
-		  初始化布局，以及初始化宽高。           
-          res/xml/new_app_widget_info.xml  70*n-30
-------------------------------------
+2.编写AppWidget的元数据xml文件。
+----------------------------------------------
+  该xml中定义当前AppWidget使用的初始化布局，以及初始化宽高。           res/xml/new_app_widget_info.xml  70*n-30
+
 		<?xml version="1.0" encoding="utf-8"?>
 		<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
 		    android:initialKeyguardLayout="@layout/appwidght_main"
@@ -167,7 +172,8 @@ tag: Android widget
 		</appwidget-provider>
 		
 		----------------------------------
-###3.清单文件中配置该AppWidget。
+3.清单文件中配置该AppWidget
+----------------------------------------------
 		  <receiver android:name="com.example.android_day09_appwidget.MyAppWidget">
 		    <intent-filter >
 		        <!-- 每个AppWidget都应该有这个action -->
