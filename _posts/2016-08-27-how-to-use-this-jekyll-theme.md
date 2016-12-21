@@ -83,9 +83,10 @@ tag: 教程
 执行
 ------------------------------------
 
-{% highlight bash %}
-jekyll server
+{% highlight bash lineanchors %}
+   jekyll server
 {% endhighlight %}
+
 
 效果
 ------------------------------------
