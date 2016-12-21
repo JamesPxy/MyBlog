@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "诫子书 old"
-date:   2014-11-17 13:31:01 +0800
+date:   2015-11-17 13:31:01 +0800
 categories: jekyll
 tag: jekyll
 ---
@@ -10,7 +10,7 @@ tag: jekyll
 {:toc}
 
 
-First POST build by Jekyll.
+First POST build by JamesPxy.
 
 
 诫子书

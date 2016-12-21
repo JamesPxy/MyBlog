@@ -1,15 +1,15 @@
 # Site settings
-name: Blog  of  JamesPxy
+name: Blog  of Peng Xiaoyong
 email: 1280272327@qq.com
-author: JamesPxy
-url: https://lebronjamespxy.github.io/jekyll_demo/
-resume_site: https://lebronjamespxy.github.io/jekyll_demo/
-github: https://github.com/LebronJamesPXY
+author: Peng Xiaoyong (JamesPxy)
+url: https://jamespxy.github.io/jekyll_demo/
+resume_site: pengxiaoyong.win
+github: https://github.com/JamesPxy
 baseurl: ""
 description: Action  speaks louder than  words , Just do  it !
-meta_description: 彭湃的个人博客，坚持积累，说到做到
-motto: Action  speaks louder than  words  ,  Just do  it !
-banner: 生命不息，奋斗不止！
+meta_description: 彭湃的个人博客，每日积累，厚积薄发！
+motto: 每日积累，不忘初心，厚积薄发！
+banner:  彭晓勇的个人博客，水滴石穿，贵在坚持！
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
@@ -28,8 +28,8 @@ FB:
     provider : duoshuo
     duoshuo:
         short_name : jamespxy
-    # disqus :
-    #     short_name : freudkang
+    disqus :
+        short_name : freudkang
     # facebook :
     #   appid : 123
     #   num_posts: 5

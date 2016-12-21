@@ -2,8 +2,8 @@
 layout: post
 title: "诫子书，my  first  test  blog!"
 date:   2016-12-20 13:31:01 +0800
-categories: 生活
-tag: 文学
+categories: Android
+tag: 测试
 ---
 
 * content
@@ -27,4 +27,4 @@ First POST build by JamesPxy.
 
 ---------------------------
 
-这是我添加的内容 引导链接 [TO JamesPxy](http://my.csdn.net/?ref=toolbar)
+查看更多 [我的csdn博客](http://blog.csdn.net/pengpai1/article/category/5806149)
