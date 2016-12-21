@@ -111,7 +111,7 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: -1px;
     font-style: italic;
 
@@ -127,9 +127,9 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: 18px;
     border: 1px solid $grey-color-light;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: #eef;
 }
 
