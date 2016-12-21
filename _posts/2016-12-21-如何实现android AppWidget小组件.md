@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "诫子书，my  first  test  blog!"
-date:   2016-12-20 13:31:01 +0800
+title: "Android中的AppWidget(桌面小部件）实现方式"
+date:   2016-12-21 13:31:01 +0800
 categories: Android
 tag: Android widget
 ---		
@@ -10,7 +10,7 @@ Android中的AppWidget(桌面小部件）实现方式
 ==========================================
 		
 如何编写一个AppWidget？
--------------------------------------
+==========================================
 	1. 编写AppWidget的布局xml界面。
 	2. 编写AppWidget的元数据xml文件。
 	 		  该xml中定义当前AppWidget使用的
@@ -32,7 +32,7 @@ Android中的AppWidget(桌面小部件）实现方式
 			  </receiver>
 		
 AppWidgetProvider的生命周期
-----------------------------------------------
+==========================================
 		onEnable
 		onUpdate
 		onDeleted
@@ -43,7 +43,7 @@ AppWidgetProvider的生命周期
 		appWidgetId
 		
 如何修改AppWidget中TextView的文字？
-----------------------------------------------
+==========================================
 		1>创建于AppWidget布局相同的
 		  RemoteViews对象。
 		2>对RemoteViews对象中的控件进行修改。
@@ -53,14 +53,14 @@ AppWidgetProvider的生命周期
 		  manager.updateAppWidget(id,views);
 		  
 ###如何给控件添加点击意图?
-----------------------------------------------
+==========================================
 		1>创建RemoteViews
 		2>remoteViews.setOnClickPendingIntent()
 		  告诉系统app：button  pendingIntent
 		3>manager.updateAppWidget();
 		
 如何点击按钮后更新AppWidget的界面？
-----------------------------------------------
+==========================================
 		
 1.编写AppWidget的控制器类
 ---------------------------------------------------------
@@ -152,8 +152,7 @@ AppWidgetProvider的生命周期
 			}
 		}
 		
-		
----------------------------
+
 2.编写AppWidget的元数据xml文件。
 ----------------------------------------------
   该xml中定义当前AppWidget使用的初始化布局，以及初始化宽高。           res/xml/new_app_widget_info.xml  70*n-30
