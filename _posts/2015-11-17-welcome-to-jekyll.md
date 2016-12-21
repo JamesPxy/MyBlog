@@ -2,8 +2,8 @@
 layout: post
 title:  "诫子书 old"
 date:   2015-11-17 13:31:01 +0800
-categories: jekyll
-tag: jekyll
+categories: android
+tag: 测试
 ---
 
 * content

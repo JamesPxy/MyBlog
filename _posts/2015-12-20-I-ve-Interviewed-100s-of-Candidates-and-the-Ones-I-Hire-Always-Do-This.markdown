@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  I’ve Interviewed 100s of Candidates and the Ones I Hire Always Do This
-date:   2014-12-20 20:05:00 +0800
+date:   2015-12-20 20:05:00 +0800
 categories: 翻译文章
 tag: Interview
 ---
