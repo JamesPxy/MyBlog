@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  浅谈Android中的网络请求HttpUrlConnettion 
+title:  浅谈HttpUrlConnettion网络请求
 date:   2017-1-19 15:08:00 +0800
 categories: Android
 tag: 网络请求
@@ -116,7 +116,7 @@ form提交的第一步是创建数据集，并根据 ENCTYPE 指定的类型值�
 4.2 Post请求
 -------------  
 
-		// Post方式请求  
+	// Post方式请求  
 	public static void requestByPost() throws Throwable {  
 	    String path = "https://reg.163.com/logins.jsp";  
 	    // 请求的参数转换为byte数组  
@@ -369,4 +369,4 @@ form提交的第一步是创建数据集，并根据 ENCTYPE 指定的类型值�
 
 	}
 
-[JSONObject解析jar包下载地址](http://dl.download.csdn.net/down10/20131127/980e4f4b4be08464539c270645c557f6.rar?response-content-disposition=attachment%3Bfilename%3D%22json.rar%22&OSSAccessKeyId=9q6nvzoJGowBj4q1&Expires=1484801774&Signature=nXixtHcPPq3KE%2FNVE7w8CI6Cupo%3D)
+[JSONObject解析jar包下载地址](http://download.csdn.net/detail/fxtx1314/6620867)
