@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Java 
+title:  Timer的schedule和scheduleAtFixedRate方法的区别 
 date:   2017-4-14 10:59:00 +0800
 categories: Java
 tag: Timer
@@ -10,7 +10,7 @@ tag: Timer
 
 
 Timer的schedule和scheduleAtFixedRate方法的区别
----------
+==================
 
 在java中，Timer类主要用于定时性、周期性任务 的触发，这个类中有两个方法比较难理解，那就是schedule和scheduleAtFixedRate方法，在这里就用实例分析一下
 
@@ -22,12 +22,12 @@ Timer的schedule和scheduleAtFixedRate方法的区别
 
 - schedule方法的执行：
 
-          ** 下一次的执行时间点=上一次程序执行完成的时间点+间隔时间**
+          下一次的执行时间点=上一次程序执行完成的时间点+间隔时间
 
 
 
 - 当换成scheduleAtFixedRate方法的执行结果如下：
-- 
-		**  下一次的执行时间点=上一次程序开始执行的时间点+间隔时间 **；
+
+		 下一次的执行时间点=上一次程序开始执行的时间点+间隔时间
 
   并且因为前一个任务要执行6秒，而当前任务已经开始执行了，因此两个任务间存在重叠，需要考虑线程同步
