@@ -9,8 +9,7 @@ tag: Timer
 {:toc}
 
 
-Timer的schedule和scheduleAtFixedRate方法的区别
-==================
+Timer的schedule和scheduleAtFixedRate方法的区别:
 
 在java中，Timer类主要用于定时性、周期性任务 的触发，这个类中有两个方法比较难理解，那就是schedule和scheduleAtFixedRate方法，在这里就用实例分析一下
 
