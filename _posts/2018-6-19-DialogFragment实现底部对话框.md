@@ -35,62 +35,62 @@ tag: DialogFragment
 
     class CommentDialogFragment : DialogFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setStyle(DialogFragment.STYLE_NORMAL, R.style.DialogFragmentTheme)
-    }
-
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater?.inflate(R.layout.fragment_show_comment, container, false)
-    }
-
-    companion object {
-        fun show(fragmentManager: FragmentManager) {
-            val ft = fragmentManager.beginTransaction()
-            val prev = fragmentManager.findFragmentByTag(CommentDialogFragment::class.java.simpleName)
-            if (prev != null) {
-                ft.remove(prev)
-            }
-            ft.addToBackStack(null)
-            val newFragment = CommentDialogFragment()
-            newFragment.show(ft, CommentDialogFragment::class.java.simpleName)
-
-        }
-    }
+	    override fun onCreate(savedInstanceState: Bundle?) {
+	        super.onCreate(savedInstanceState)
+	        setStyle(DialogFragment.STYLE_NORMAL, R.style.DialogFragmentTheme)
+	    }
+	
+	    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+	        return inflater?.inflate(R.layout.fragment_show_comment, container, false)
+	    }
+	
+	    companion object {
+	        fun show(fragmentManager: FragmentManager) {
+	            val ft = fragmentManager.beginTransaction()
+	            val prev = fragmentManager.findFragmentByTag(CommentDialogFragment::class.java.simpleName)
+	            if (prev != null) {
+	                ft.remove(prev)
+	            }
+	            ft.addToBackStack(null)
+	            val newFragment = CommentDialogFragment()
+	            newFragment.show(ft, CommentDialogFragment::class.java.simpleName)
+	
+	        }
+	    }
 	}
 
 
 2.在onStart()中设置弹框属性来底部弹框
 -----------------------
     
-public class ShowCommentFragment extends DialogFragment {
+	public class ShowCommentFragment extends DialogFragment {
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setStyle(DialogFragment.STYLE_NORMAL, R.style.AddPublicPraiseDialogTheme);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        Window window = getDialog().getWindow();
-        WindowManager.LayoutParams params = window.getAttributes();
-        //设置Gravity
-        params.gravity = Gravity.BOTTOM;
-        params.width = WindowManager.LayoutParams.MATCH_PARENT;
-        window.setAttributes(params);
-        // 用透明颜色替换掉系统自带背景
-        int color = ContextCompat.getColor(getActivity(), android.R.color.transparent);
-        window.setBackgroundDrawable(new ColorDrawable(color));
-    }
-
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_show_comment, container);
-    }
+	    @Override
+	    public void onCreate(@Nullable Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setStyle(DialogFragment.STYLE_NORMAL, R.style.AddPublicPraiseDialogTheme);
+	    }
+	
+	    @Override
+	    public void onStart() {
+	        super.onStart();
+	        Window window = getDialog().getWindow();
+	        WindowManager.LayoutParams params = window.getAttributes();
+	        //设置Gravity
+	        params.gravity = Gravity.BOTTOM;
+	        params.width = WindowManager.LayoutParams.MATCH_PARENT;
+	        window.setAttributes(params);
+	        // 用透明颜色替换掉系统自带背景
+	        int color = ContextCompat.getColor(getActivity(), android.R.color.transparent);
+	        window.setBackgroundDrawable(new ColorDrawable(color));
+	    }
+	
+	
+	    @Nullable
+	    @Override
+	    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+	        return inflater.inflate(R.layout.fragment_show_comment, container);
+	    }
 
 	}
 
