@@ -16,10 +16,9 @@ tag: RecycleView
             mObservable.notifyItemRangeChanged(position, 1, payload);
         }
 
-
- 	public void onBindViewHolder(VH holder, int position, List<Object> payloads) {
-            onBindViewHolder(holder, position);
-    }
+	public void onBindViewHolder(VH holder, int position, List<Object> payloads) {
+	            onBindViewHolder(holder, position);
+	    }
 
  关键点：在于payload 传递数据源  实现三参数的onBindViewHolder，如果payloads为空则全部刷新，不为空实现局部刷新
 
