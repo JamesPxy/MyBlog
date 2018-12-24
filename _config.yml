@@ -1,9 +1,9 @@
 # Site settings
-name: Blog  of Peng Xiaoyong
+name: Blog  of JamesPxy
 email: 1516462744@qq.com
-author: Peng Xiaoyong (JamesPxy)
-#url: pengxiaoyong.win
-resume_site: https://github.com/JamesPxy
+author: JamesPxy
+url: https://jamespxy.github.io
+resume_site: https://jamespxy.github.io
 github: https://github.com/JamesPxy
 baseurl: "/MyBlog"
 description: Action speaks louder than  words , Just do  it !
