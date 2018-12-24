@@ -1,15 +1,15 @@
 # Site settings
 name: Blog  of Peng Xiaoyong
-email: 1280272327@qq.com
+email: 1516462744@qq.com
 author: Peng Xiaoyong (JamesPxy)
-url:https://jamespxy.github.io/MyBlog/
+#url: pengxiaoyong.win
 resume_site: https://github.com/JamesPxy
 github: https://github.com/JamesPxy
-baseurl: ""
-description: Action  speaks louder than  words , Just do  it !
-meta_description: 彭湃的个人博客，每日积累，厚积薄发！
+baseurl: "/MyBlog"
+description: Action speaks louder than  words , Just do  it !
+meta_description:JamesPxy的个人博客，每日积累，厚积薄发！
 motto: 每日积累，厚积薄发！
-banner:  彭晓勇的个人博客，不忘初心，水滴石穿，贵在坚持！（Good  good  study,day  day  up!!!）
+banner:  不忘初心，砥砺前行！水滴石穿，贵在坚持！
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
@@ -17,7 +17,7 @@ paginate: 10
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 
-github_username: luoyan35714
+github_username: JamesPxy
 highlighter: rouge
 
 # Build settings
