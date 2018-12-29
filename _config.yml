@@ -2,12 +2,12 @@
 name: Blog  of JamesPxy
 email: 1516462744@qq.com
 author: JamesPxy
-url: https://jamespxy.github.io
+#url: https://jamespxy.github.io
 resume_site: https://jamespxy.github.io
 github: https://github.com/JamesPxy
 baseurl: "/MyBlog"
 description: Action speaks louder than  words , Just do  it !
-meta_description:JamesPxy的个人博客，每日积累，厚积薄发！
+meta_description: JamesPxy的个人博客，每日积累，厚积薄发！
 motto: 每日积累，厚积薄发！
 banner:  不忘初心，砥砺前行！水滴石穿，贵在坚持！
 
