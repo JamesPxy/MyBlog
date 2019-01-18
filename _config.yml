@@ -6,7 +6,8 @@ author: JamesPxy
 url: http://pengxiaoyong.cn
 resume_site: http://jamespxy.github.io/
 github: https://github.com/JamesPxy/
-baseurl: "/MyBlog"
+#baseurl: "/MyBlog"
+baseurl: ""
 description: Action speaks louder than  words , Just do  it !
 meta_description: JamesPxy的个人博客，每日积累，厚积薄发！
 motto: 每日积累，厚积薄发！
