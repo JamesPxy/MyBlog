@@ -2,8 +2,8 @@
 layout: post
 title:  "Java Volatile关键字详解"
 date:   2017-10-31 17:07:01 +0800
-categories: java
-tag: java基础
+categories: Java
+tag: Java基础
 ---
 
 * content
