@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "View中的getWidth和getMeasuredWidth的区别"
+title: "View的getWidth和getMeasuredWidth的区别"
 date:   2019-3-15 15:46 +0800
 categories: Android
 tag: 经验
@@ -60,7 +60,7 @@ tag: 经验
 - getWidth 源码剖析
 -------------------------
 
-    public final int getWidth() {
+    'public final int getWidth() {
 		return mRight - mLeft;
 	}
 
@@ -68,16 +68,15 @@ tag: 经验
     
     // Assign a size and position to this view.
     //This is called from layout.
-    
     protected boolean setFrame(int left, int top, int right, int bottom) {
-    boolean changed = false;
+   	        boolean changed = false;
     		// 只展示核心代码
     		...
-    mLeft = left;
-    mTop = top;
-    mRight = right;
-    mBottom = bottom;
-    ...
+		    mLeft = left;
+		    mTop = top;
+		    mRight = right;
+		    mBottom = bottom;
+		    ...
     }
     
     从注释中可以看到该方法被layout()调用
@@ -85,11 +84,12 @@ tag: 经验
     public void layout(int l, int t, int r, int b) {
        ... 
        boolean changed = isLayoutModeOptical(mParent) ?
-    setOpticalFrame(l, t, r, b) : setFrame(l, t, r, b);
+       setOpticalFrame(l, t, r, b) : setFrame(l, t, r, b);
        ...
     }
-    其中setOpticalFrame()内部也是调用setFrame()方法
 
+    其中setOpticalFrame()内部也是调用setFrame()方法'
+ 
 
 **所以，getWidth() 的取值最终来源于 layout() 方法的调用。通常，layout() 方法在 parent 中被调用，来确定 child views 在父容器中的位置，一般在自定义 ViewGroup 的 onLayout() 方法中调用**
 
