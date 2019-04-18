@@ -67,7 +67,6 @@ tag: 经验
     mRight、mLeft 变量分别表示 View 相对父容器的左右边缘位置，并且二者的赋值是通过 setFrame() 方法赋值：
     
     // Assign a size and position to this view.
-     *
     //This is called from layout.
     
     protected boolean setFrame(int left, int top, int right, int bottom) {
@@ -103,9 +102,11 @@ getMeasuredWidth()获取的是view原始的大小，也就是这个view在XML文
 一般情况下，getWidth() 与 getMeasuredWidth() 的返回值是相同的。
 ** 注意在自定义View或者ViewGroup中，在 onLayout() **方法中通过 child.getMeasuredWidth() 方法获取 child views 的原始大小来设置其显示区域，不要用getWidth()，有可能获得值为0（诸如 LinearLayout 之类的系统中的 ViewGroup 都是这么做的；
 
-除此之外，我们都可以通过 getWidth() 方法获取 View 的实际显示宽度。** ##
+除此之外，我们都可以通过 getWidth() 方法获取 View 的实际显示宽度。
 
-##或者简言之：
+
+- 或者简言之：
+------------
 - getMeasuredWidth方法获得的值是setMeasuredDimension方法设置的值，它的值在measure方法运行后就会确定
 - getWidth方法获得是layout方法中传递的四个参数中的mRight-mLeft，它的值是在layout方法运行后确定的 
 - 一般情况下在onLayout方法中使用getMeasuredWidth方法，而在除onLayout方法之外的地方用getWidth方法。
