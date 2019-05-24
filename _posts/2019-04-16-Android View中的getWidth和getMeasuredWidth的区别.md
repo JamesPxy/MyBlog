@@ -60,16 +60,15 @@ tag: 经验
 - getWidth 源码剖析
 -------------------------
 
-    'public final int getWidth() {
+    public final int getWidth() {
 		return mRight - mLeft;
 	}
 
-    mRight、mLeft 变量分别表示 View 相对父容器的左右边缘位置，并且二者的赋值是通过 setFrame() 方法赋值：
+mRight、mLeft 变量分别表示 View 相对父容器的左右边缘位置，并且二者的赋值是通过 setFrame() 方法赋值：
     
     // Assign a size and position to this view.
     //This is called from layout.
-    protected boolean setFrame(int left, int top, int right, int bottom) {
-   	        boolean changed = false;
+    protected boolean setFrame(int left, int top, int right, int bottom) {  
     		// 只展示核心代码
     		...
 		    mLeft = left;
@@ -79,7 +78,7 @@ tag: 经验
 		    ...
     }
     
-    从注释中可以看到该方法被layout()调用
+从注释中可以看到该方法被layout()调用
     
     public void layout(int l, int t, int r, int b) {
        ... 
@@ -88,8 +87,7 @@ tag: 经验
        ...
     }
 
-    其中setOpticalFrame()内部也是调用setFrame()方法'
- 
+其中setOpticalFrame()内部也是调用setFrame()方法
 
 **所以，getWidth() 的取值最终来源于 layout() 方法的调用。通常，layout() 方法在 parent 中被调用，来确定 child views 在父容器中的位置，一般在自定义 ViewGroup 的 onLayout() 方法中调用**
 
