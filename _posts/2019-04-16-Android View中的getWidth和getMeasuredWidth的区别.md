@@ -17,7 +17,7 @@ tag: 经验
 
 构造函数——->onMeasure——->onSizeChanged——->onLayout——->onDraw——-> onMeasure——->onLayout——->onDraw 
 
-![View的核心方法调用顺序图](https://github.com/JamesPxy/MyBlog/image/view_construtor.jpg)
+![View的核心方法调用顺序图](https://github.com/JamesPxy/MyBlog/blob/gh-pages/image/view_construtor.jpg)
 
  
 
