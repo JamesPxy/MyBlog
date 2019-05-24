@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "View的getWidth和getMeasuredWidth的区别"
+title: "Android View的getWidth和getMeasuredWidth的区别"
 date:   2019-3-15 15:46 +0800
 categories: Android
 tag: 经验
@@ -17,7 +17,7 @@ tag: 经验
 
 构造函数——->onMeasure——->onSizeChanged——->onLayout——->onDraw——-> onMeasure——->onLayout——->onDraw 
 
-![View的核心方法调用顺序图](https://i.imgur.com/f3JwZGD.jpg)
+![View的核心方法调用顺序图](https://github.com/JamesPxy/MyBlog/image/view_construtor.jpg)
 
  
 
