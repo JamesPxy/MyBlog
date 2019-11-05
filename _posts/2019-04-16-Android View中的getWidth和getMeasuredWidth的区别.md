@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Android View的getWidth和getMeasuredWidth的区别"
-date:   2019-3-15 15:46 +0800
+title:  View的getWidth和getMeasuredWidth的区别
+date:   2019-03-15 15:46 +0800
 categories: Android
 tag: 经验
 ---
@@ -12,20 +12,18 @@ tag: 经验
 
 
 
-- 先上一张图 View核心方法调用顺序应该是
------------------------------------------
+1. 先上一张图 View核心方法调用顺序应该是
+--------------------------------------
 
 构造函数——->onMeasure——->onSizeChanged——->onLayout——->onDraw——-> onMeasure——->onLayout——->onDraw 
 
-![View的核心方法调用顺序图](https://github.com/JamesPxy/MyBlog/blob/gh-pages/image/view_construtor.jpg)
+![View的核心方法调用顺序图](/posts/image/view_construtor.jpg)
 
- 
-
-- View getMeasuredWidth 源码剖析：
-----------------------------------------
+2. View getMeasuredWidth 源码剖析：
+--------------------------------------
 
     public final int getMeasuredWidth() {
-			 return mMeasuredWidth & MEASURED_SIZE_MASK;
+		return mMeasuredWidth & MEASURED_SIZE_MASK;
 	}
 
 	public static final int MEASURED_SIZE_MASK = 0x00ffffff;
@@ -57,7 +55,7 @@ tag: 经验
 **可以看出，mMeasuredWidth 的赋值，即 getMeasuredWidth() 的取值最终来源于 setMeasuredDimension() 方法调用时传递的参数！在自定义 View 时测量并设置 View 宽高时经常用到。通常在 onMeasure() 方法中设置，可以翻看一下系统中的 TextView、LinearLayout 等方法，都是如此。**
 
 
-- getWidth 源码剖析
+3. getWidth 源码剖析
 -------------------------
 
     public final int getWidth() {
@@ -91,23 +89,24 @@ mRight、mLeft 变量分别表示 View 相对父容器的左右边缘位置，�
 
 **所以，getWidth() 的取值最终来源于 layout() 方法的调用。通常，layout() 方法在 parent 中被调用，来确定 child views 在父容器中的位置，一般在自定义 ViewGroup 的 onLayout() 方法中调用**
 
-## 分析完源码，可以知道：
-measuredWidth 值在 View 的 measure 阶段决定的，是通过 setMeasuredDimension() 方法赋值的；
+4. 分析完源码，可以知道：
+-----------------------
+-measuredWidth 值在 View 的 measure 阶段决定的，是通过 setMeasuredDimension() 方法赋值的；
 width 值在 layout 阶段决定的，是由 layout() 方法决定的。
 有一点需要注意，通常来讲，View 的 width 和 height 是由 View 本身和 parent 容器共同决定的。
 
-getMeasuredWidth()获取的是view原始的大小，也就是这个view在XML文件中配置或者是代码中设置的大小。getWidth（）获取的是这个view最终显示的大小，这个大小有可能等于原始的大小也有可能不等于原始大小。
+-getMeasuredWidth()获取的是view原始的大小，也就是这个view在XML文件中配置或者是代码中设置的大小。getWidth（）获取的是这个view最终显示的大小，这个大小有可能等于原始的大小也有可能不等于原始大小。
 一般情况下，getWidth() 与 getMeasuredWidth() 的返回值是相同的。
-** 注意在自定义View或者ViewGroup中，在 onLayout() **方法中通过 child.getMeasuredWidth() 方法获取 child views 的原始大小来设置其显示区域，不要用getWidth()，有可能获得值为0（诸如 LinearLayout 之类的系统中的 ViewGroup 都是这么做的；
-
+-注意在自定义View或者ViewGroup中，在 onLayout() **方法中通过 child.getMeasuredWidth() 方法获取 child views 的原始大小来设置其显示区域，不要用getWidth()，有可能获得值为0（诸如 LinearLayout 之类的系统中的 ViewGroup 都是这么做的；
 除此之外，我们都可以通过 getWidth() 方法获取 View 的实际显示宽度。
 
 
-- 或者简言之：
+5.总结：
 ------------
-- getMeasuredWidth方法获得的值是setMeasuredDimension方法设置的值，它的值在measure方法运行后就会确定
-- getWidth方法获得是layout方法中传递的四个参数中的mRight-mLeft，它的值是在layout方法运行后确定的 
-- 一般情况下在onLayout方法中使用getMeasuredWidth方法，而在除onLayout方法之外的地方用getWidth方法。
+
+1. getMeasuredWidth方法获得的值是setMeasuredDimension方法设置的值，它的值在measure方法运行后就会确定
+2. getWidth方法获得是layout方法中传递的四个参数中的mRight-mLeft，它的值是在layout方法运行后确定的 
+2. 一般情况下在onLayout方法中使用getMeasuredWidth方法，而在除onLayout方法之外的地方用getWidth方法。
 
 
 
